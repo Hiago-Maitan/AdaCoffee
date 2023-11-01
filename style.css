@@ -71,8 +71,7 @@ nav ul li a:hover {
 .firstBanner-container {
   position: relative;
   height: 90vh;
-  background-image: url('./assets/banner01.jpg');
-  background-size: cover;
+  background: url('./assets/banner01.jpg') no-repeat top center/cover;
 
   display: flex;
   flex-direction: column;
@@ -102,7 +101,7 @@ nav ul li a:hover {
   border: none;
 }
 
-.firstBanner-container button a{
+.firstBanner-container button a {
   color: #ffff;
   text-decoration: none;
 }
@@ -189,8 +188,11 @@ main .aboutUs-container p span {
 .products-container article figure img {
   width: 100%;
   height: 150px;
-  border: 4px solid #75551E;
   border-radius: 100%;
+}
+
+.products-container article figure img:hover{
+  border: 4px solid #75551E;
 }
 
 .products-container figcaption {
@@ -225,7 +227,9 @@ td {
   height: 25px;
 }
 
-table .header-top td, .header-left, .infos-table {
+table .header-top td,
+.header-left,
+.infos-table {
   background: #87652D;
   border-radius: 3px;
 }
@@ -249,30 +253,33 @@ table .infos-table {
 /* Formulario */
 
 .form-container .secondBanner-container {
+  position: relative;
   width: 100%;
   height: 400px;
-  position: relative;
-  background-image: url('./assets/banner02.png');
-  background-size: cover;
+  background: url('./assets/banner02.png') no-repeat top center/cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .form-container .secondBanner-container h1 {
   position: relative;
-  top: 20%;
+  margin-bottom: 4rem;
   color: #513500;
-  text-align: center;
 }
 
 
 .form-container .secondBanner-container form {
-  margin-top: 10rem;
-  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .form-container .secondBanner-container input {
-  display: block;
   text-align: center;
-  margin-bottom: 1rem;
   padding: 8px 43px;
   border: none;
   border-radius: 0.2rem;
@@ -295,7 +302,6 @@ table .infos-table {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  margin-left: 7%;
 }
 
 .form-container .secondBanner-container button:hover {
@@ -304,17 +310,20 @@ table .infos-table {
 
 footer {
   width: 100%;
-  height: 100px;
+  height: 100%;
   background-color: #513500;
 
   padding: 20px 24px;
   color: #ffff;
   font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 15rem;
 }
 
 footer .infos-company h5 {
-  margin-bottom: 5px;
   font-weight: 400;
+  margin-bottom: 0.4rem;
 }
 
 footer .infos-company a {
@@ -323,22 +332,16 @@ footer .infos-company a {
   color: #ffff;
 }
 
-footer .infos-company a:hover {
+footer .infos-company a:hover, footer .other-infos h5:hover {
   text-decoration: underline;
 }
 
-footer .infos-company,
 footer .other-infos {
-  display: inline-block;
+  display: flex;
+  gap: 10rem;
 }
 
 footer .other-infos h5 {
-  display: inline-block;
-  margin-left: 15rem;
   font-size: 0.9rem;
   cursor: pointer;
-}
-
-footer .other-infos h5:hover {
-  text-decoration: underline;
 }
