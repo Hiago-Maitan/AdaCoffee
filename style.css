@@ -1,5 +1,4 @@
 /* Styles Scrollbar */
-
 ::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -29,7 +28,6 @@ body {
 /* Navbar */
 header {
   width: 100%;
-  height: 10vh;
   background-color: #513500;
 }
 
@@ -49,10 +47,11 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 15rem;
+  /* gap: 15rem; */
 }
 
 nav ul li {
+  margin: 0px 70px;
   list-style: none;
   font-weight: 700;
 }
@@ -64,6 +63,23 @@ nav ul li a {
 
 nav ul li a:hover {
   border-bottom: 2px solid #CB9C53;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu ul li a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+.mobile-menu ul li a:hover {
+  border-bottom: 2px solid #75551E;
 }
 
 /* First Banner */
@@ -191,7 +207,7 @@ main .aboutUs-container p span {
   border-radius: 100%;
 }
 
-.products-container article figure img:hover{
+.products-container article figure img:hover {
   border: 4px solid #75551E;
 }
 
@@ -332,7 +348,8 @@ footer .infos-company a {
   color: #ffff;
 }
 
-footer .infos-company a:hover, footer .other-infos h5:hover {
+footer .infos-company a:hover,
+footer .other-infos h5:hover {
   text-decoration: underline;
 }
 
@@ -344,4 +361,60 @@ footer .other-infos {
 footer .other-infos h5 {
   font-size: 0.9rem;
   cursor: pointer;
+}
+
+/* Responsividade */
+
+@media(max-width:945px) {
+  nav ul li {
+    margin: 0px 30px;
+    list-style: none;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .menu {
+    padding: 1.5rem 4rem;
+  }
+
+  .menu ul li {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-menu ul li {
+    display: block;
+    padding-top: 1.2rem;
+  }
+
+  .open {
+    display: block;
+  }
+}
+
+@media(max-width:790px) {
+
+  footer,
+  footer .other-infos {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 }

@@ -17,12 +17,27 @@
   <header>
     <nav>
       <img src="assets/logo.png" alt="Logo da Ada Coffee" class="logo">
+      <div class="menu">
+        <ul>
+          <li><a href="#quemSomos">Quem somos</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#whatsApp">Agendamento</a></li>
+        </ul>
+      </div>
+        
+      <div class="mobile-menu-icon">
+        <button onclick="menuShow()"><img class="icon" src="img/menu_white_36dp.svg" alt=""></button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
       <ul>
         <li><a href="#quemSomos">Quem somos</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#whatsApp">Agendamento</a></li>
       </ul>
-    </nav>
+    </div>
+
   </header>
 
   <!-- First Banner -->
@@ -224,6 +239,7 @@
   </footer>
 
   <script src="regexPhone.js"></script>
+  <script src="responsive.js"></script>
 </body>
 
 </html>
